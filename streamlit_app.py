@@ -19,7 +19,7 @@ st.markdown(
     """   
     
     This tool creates a **.vcf contact file** containing every phone number in the requested range.  
-    Add the contact to your device and block it to silence entire number blocks.
+    Add the contact to your device and block it to silence an entire number range.
 
     ---
     """
