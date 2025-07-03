@@ -60,8 +60,44 @@ if submitted:
         if number < 1000000:
             range_power = 10-len(str(number))
             block_len = 10**(range_power)
-            st.warning(f"⚠️ Warning: File contains {block_len:,} numbers. Most devices are incapable of handling contacts of this size. Proceed with caution.")
+            st.warning(f"⚠️ Warning: File contains {block_len:,} numbers. Most mobile devices are incapable of handling contacts of this size. Proceed with caution.")
             # st.info("Proceed with caution.")
+
+st.markdown("---")  # horizontal line for clarity
+
+st.subheader("Example")
+
+st.markdown("""
+Spam calls might come from:
+
+- `202-555-1212`  
+- `202-555-1234`  
+- `202-555-1010`
+
+If you enter *20255512* the app will generate a contact with 100 numbers in the range `202-555-12XX`:
+
+- `202-555-1200`  
+- `202-555-1201`  
+- `...`  
+- `202-555-1299`
+
+You can then save and block this single contact to cover the entire range.
+This would, however, still allow calls from `202-555-1010`.
+
+Entering *2025551* would generate a similar contact with 1000 numbers, successfully blocking the three above numbers and any others the range `202-555-1XXX`:
+
+- `202-555-1000`  
+- `202-555-1001`  
+- `...`  
+- `202-555-1999`
+
+⚠️ Caution: exported file size increases exponentially. Most mobile devices will struggle to import contacts this large. 
+
+Entering at least 7 digits (1000 numbers or less) is recommended if using a mobile device.
+"""
+           )
+
+
 
 
         # Footer
@@ -72,7 +108,7 @@ st.markdown(
         © 2025 Michael Hart  
         <br>
         <a href="https://github.com/OMGHart/range-contact-generator" target="_blank">
-            Source Code
+            Source Code: Github
         </a>
         <br><br>
     </div>
