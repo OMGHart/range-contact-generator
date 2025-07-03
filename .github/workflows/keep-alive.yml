@@ -1,0 +1,13 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: '*/59 * * * *'  # every 59 minutes (GitHub uses UTC)
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl the Streamlit app
+        run: curl --silent https://harts-contact-generator.streamlit.app
+

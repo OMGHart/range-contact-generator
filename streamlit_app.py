@@ -108,7 +108,7 @@ st.markdown(
         © 2025 Michael Hart  
         <br>
         <a href="https://github.com/OMGHart/range-contact-generator" target="_blank">
-            Source Code: Github
+            Source Code: GitHub
         </a>
         <br><br>
     </div>
