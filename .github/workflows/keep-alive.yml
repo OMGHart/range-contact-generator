@@ -2,7 +2,7 @@ name: Keep Alive
 
 on:
   schedule:
-    - cron: '*/59 * * * *'  # every 59 minutes (GitHub uses UTC)
+    - cron: '*/15 * * * *'  # every 59 minutes (GitHub uses UTC)
 
 jobs:
   ping:
